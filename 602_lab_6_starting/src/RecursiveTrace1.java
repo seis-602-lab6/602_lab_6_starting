@@ -9,6 +9,8 @@ public class RecursiveTrace1
 			return b * mystery1(a - 1, b);
 	}
 
+	//
+
 	public static int equivalent(int a, int b)
 	{
 		return 47;
