@@ -13,13 +13,26 @@ public class RecursiveTrace2
 			
 			return result;
 		}
+	
+	}
+	
+	public static String mystery2loop(int n)
+	{
+		String result ="";
 		
+		while (n > 0)
+		{
+			result = n%2 + result;
+			n = n/2;
+		}
 		
+		return result;
 	}
 
 	public static void main(String[] args)
 	{
-		StdOut.println (mystery2(47));
+		StdOut.println (mystery2(179));
+		StdOut.println (mystery2loop(179));
 
 	}
 
