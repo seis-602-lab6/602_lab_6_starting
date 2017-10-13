@@ -11,7 +11,8 @@ public class RecursiveTrace1
 
 	public static int equivalent(int a, int b)
 	{
-		return 47;
+
+		return (int) Math.pow(b, a);
 	}
 
 	public static void main(String[] args)
