@@ -121,7 +121,7 @@ public class Turtle
 		double x0 = 0.5;
 		double y0 = 0.0;
 		double a0 = 60.0;
-		double step = Math.sqrt(3) / 2;
+		double step = 100*Math.sqrt(3) / 2;
 		
 		Turtle turtle = new Turtle(x0, y0, a0);
 		
