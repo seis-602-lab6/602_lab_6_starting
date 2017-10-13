@@ -3,7 +3,7 @@ import java.awt.Color;
 public class Turtle
 {
 	private double x, y; // turtle is at (x, y)
-	
+
 	public double getX()
 	{
 		return x;
@@ -37,7 +37,7 @@ public class Turtle
 	private double angle; // facing this many degrees counterclockwise from the
 							// x-axis
 	private boolean isPenUp; // true => no ink when moving, otherwise draw
-	
+
 	// start at (x0, y0), facing a0 degrees counterclockwise from the x-axis
 	public Turtle(double x0, double y0, double a0)
 	{
@@ -109,22 +109,22 @@ public class Turtle
 	{
 		isPenUp = false;
 	}
-	
+
 	public void penUp()
 	{
 		isPenUp = true;
 	}
-	
+
 	// sample client for testing
 	public static void main(String[] args)
 	{
 		double x0 = 0.5;
 		double y0 = 0.0;
 		double a0 = 60.0;
-		double step = Math.sqrt(3) / 2;
-		
+		double step = 100 * Math.sqrt(3) / 2;
+
 		Turtle turtle = new Turtle(x0, y0, a0);
-		
+
 		turtle.penDown();
 		turtle.goForward(step);
 		turtle.turnLeft(120.0);
@@ -132,7 +132,7 @@ public class Turtle
 		turtle.turnLeft(120.0);
 		turtle.goForward(step);
 		turtle.turnLeft(120.0);
-		
+
 	}
 
 }

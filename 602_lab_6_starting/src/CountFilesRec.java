@@ -30,12 +30,26 @@ public class CountFilesRec
 	{
 		int count = 0;
 
-		// iterate over each file in directory dir
-		// add 1 to running count for ordinary file,
-		// add 1+countFiles(sub) for directory file
+		if (dir.isDirectory())
+		{
+			File[] files = dir.listFiles(); // All files and subdirectories
+			for (int i = 0; i < files.length; i++)
+			{
+				count += countFiles(files[i]); // Recursive call
+			}
+		}
+		else
+		{ // Base case
+			count = 1;
+		}
 
 		return count;
+
 	}
+
+	// iterate over each file in directory dir
+	// add 1 to running count for ordinary file,
+	// add 1+countFiles(sub) for directory file
 
 	public static void main(String[] args)
 	{
