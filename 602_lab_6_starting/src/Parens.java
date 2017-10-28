@@ -7,6 +7,9 @@ public class Parens
 		// check if str is correctly-nested parentheses: ((((()))))
 
 		// base case: empty string is nested
+		
+		if (str.isEmpty())
+			return true;
 
 		// check first, last characters and return if NOT nested
 
@@ -14,11 +17,14 @@ public class Parens
 			return false;
 
 		// check if last char is ')'
-
+		
+		if (str.charAt(str.length()-1) != ')')
+			return false;
+ 
 		// do recursive call to check within (..):
 		//	extract substring that's all but first, last
 
-		return false;
+		return isNested(str.substring(1,  str.length()-1));
 	}
 
 	public static boolean isBalanced(String str)
