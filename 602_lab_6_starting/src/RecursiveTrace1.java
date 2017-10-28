@@ -1,5 +1,4 @@
-My name is Patrice Yemmene
-
+//My name is Patrice Yemmene
 public class RecursiveTrace1
 {
 	public static int mystery1 (int a, int b)
@@ -12,7 +11,7 @@ public class RecursiveTrace1
 
 	public static int equivalent(int a, int b)
 	{
-		return 47; 
+		return (int) Math.pow(b,  a); 
 	}
 	
 	public static void main(String[] args)
